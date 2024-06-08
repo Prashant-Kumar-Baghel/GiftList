@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-slide > div{
+    margin: 0px 10px;
+}
+
+/* Custom styles for react-slick arrows */
+.slick-prev:before,
+.slick-next:before {
+  /* color: #0F7B9B !important; Change the color of the arrow icons */
+  width:6.29px !important;
+  height:12.57px !important;
+  top:13.29px !important;
+  left:11.86px !important;
+  content: '←';
+  color:black !important;
+  position:absolute;
+}
+/*  */
+
+.slick-next:before {
+  content: '→'; /* Change the content to a custom arrow, e.g., right arrow for next */
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #FAFBFD !important; /* Change the background color of the arrows */
+  border-radius: 36px !important;
+  width: 46px !important;
+  height: 46px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 1 !important;
+  padding: 12px 12px 12px 13px !important;
+  border: 1px solid #CAD3DD !important;
+}
+
+.slick-prev {
+  left: -50px !important; /* Adjust position if necessary */
+}
+
+.slick-next {
+  right: -50px !important; /* Adjust position if necessary */
+}

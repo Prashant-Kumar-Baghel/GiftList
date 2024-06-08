@@ -21,9 +21,6 @@ export const GiftFormSchema = Yup.object().shape({
       "Entertaining",
     ], 'Invalid data')
     .required("Age is required"),
-  identify: Yup.string()
-    .oneOf(["female", "male", "other"], "Invalid Gender")
-    .required("Identify is required"),
-  maximumSpend: Yup.number(),
-  countryName: Yup.string()
+  maximumSpend: Yup.number().required(),
+  countryName: Yup.string().required()
 });

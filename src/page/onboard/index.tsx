@@ -1,9 +1,9 @@
 import React from "react";
-
+import { ReceipientForm } from "../../components/form/ReciepientForm";
 const Onboard: React.FC = () => {
   return (
     <>
-      <p>User Onboard</p>
+      <ReceipientForm />
     </>
   );
 };

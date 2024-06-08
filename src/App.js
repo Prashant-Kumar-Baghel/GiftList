@@ -1,40 +1,35 @@
-import logo from './logo.svg';
-import { ReceipientForm } from './components/form/ReciepientForm.tsx';
-import { GiftForm } from './components/form/GiftForm.tsx';
-import './App.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
+import {ReceipientForm} from './components/form/ReciepientForm.tsx';
+import Products from './page/product/Products.tsx';
+import Loader from './components/Loder/Loder.tsx';
+import Navbar from './components/Navbar/Navbar.tsx'; // Adjust the path as needed
+
+const AppLayout = () => (
+  <div>
+    <Navbar authorize={true} /> {/* Set authorize as needed */}
+    <div style={{ marginTop: '64px' }}> {/* Add margin to prevent content overlap */}
+      <Outlet />
+    </div>
+  </div>
+);
 
 function App() {
-  const appRouter=createBrowserRouter([
- 
+  const appRouter = createBrowserRouter([
     {
-      path:"/",
-      element:<ReceipientForm/>
+      path: "/",
+      element: <AppLayout />, // AppLayout will include Navbar and Outlet
+      children: [
+        { path: "", element: <ReceipientForm /> },
+        { path: "products/:giftType", element: <Products /> },
+        { path: "loading-page", element: <Loader /> },
+      ],
     },
-    {
-      path:"/gift-form",
-      element:<GiftForm/>
-    }
-  ])
+  ]);
+
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      {/* <ReceipientForm/> */}
-      {/* <GiftForm/> */}
-      <RouterProvider router={appRouter}/>
+      <RouterProvider router={appRouter} />
     </div>
   );
 }

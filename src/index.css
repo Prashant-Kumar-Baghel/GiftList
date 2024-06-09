@@ -64,3 +64,11 @@
   right: -17px !important; /* Adjust position if necessary */
 }
 }
+.placeholder-large::placeholder {
+  font-size: 24px;
+}
+@media(max-width:576px){
+  .placeholder-large::placeholder {
+    font-size: 16px;
+  }
+}

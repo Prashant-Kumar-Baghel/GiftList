@@ -21,10 +21,6 @@ const Footer = () => {
                 <img src="/images/True.png" className="bg-[#1877F2] p-1 rounded-md w-[24px] h-[24px]" alt="" />
                 <img src="/images/tiktok.png" className="bg-white text-black p-1 rounded-md w-[24px] h-[24px]" alt="" />
                 <img src="/images/Instagram.png" className=" p-1 rounded-md w-[24px] h-[24px]" alt="" />
-                {/* <div className="w-6 h-6 bg-white rounded-md flex justify-center items-center">
-                  <div className="w-[13.04px] h-[14.80px]"></div>
-                </div>
-                <div className="w-6 h-6"></div> */}
               </div>
             </div>
             <div className="text-white text-[11px] font-normal leading-[18px] mt-4 md:mt-0">

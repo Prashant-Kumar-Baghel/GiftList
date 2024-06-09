@@ -26,7 +26,6 @@ interface CardsProps {
 }
 
 const Cards: React.FC<CardsProps> = ({ productItem }) => {
-  const [value, setValue] = React.useState<number | null>(2);
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -72,10 +71,8 @@ const Cards: React.FC<CardsProps> = ({ productItem }) => {
           </Typography>
           <Rating
             name="simple-controlled"
-            value={value}
-            onChange={(event, newValue) => {
-              setValue(newValue);
-            }}
+            value={4}
+            max={4}
           />
           <Typography
             className="font-[400] text-[11px] text-[#A8ACB3]"
@@ -144,7 +141,7 @@ const Cards: React.FC<CardsProps> = ({ productItem }) => {
             {productItem?.text}
           </div>
         )}
-        <button>
+        <button className="absolute right-[6px] top-[4px]">
           <img src="/images/button.png" alt="" onClick={handleClick} />
         </button>
       </div>

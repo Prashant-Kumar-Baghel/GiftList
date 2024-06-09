@@ -45,3 +45,22 @@
 .slick-next {
   right: -50px !important; /* Adjust position if necessary */
 }
+@media(max-width:986px){
+  .slick-prev:before, .slick-next:before {
+    top: 3.29px !important;
+    left: 2.86px !important;
+   
+}
+.slick-prev, .slick-next {
+
+  width: 20px !important;
+  height: 20px !important;
+ 
+}
+.slick-prev {
+  left: -17px !important;
+}
+.slick-next {
+  right: -17px !important; /* Adjust position if necessary */
+}
+}

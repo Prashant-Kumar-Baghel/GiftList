@@ -20,7 +20,7 @@ function App() {
       path: "/",
       element: <AppLayout />, // AppLayout will include Navbar and Outlet
       children: [
-        { path: "", element: <ReceipientForm /> },
+        { path: "/", element: <ReceipientForm /> },
         { path: "products/:giftType", element: <Products /> },
         { path: "loading-page", element: <Loader /> },
       ],

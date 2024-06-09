@@ -19,6 +19,7 @@ interface ProductItem {
   range: string;
   image: string;
   id: string;
+  text:string;
 }
 
 const Products: React.FC = () => {
@@ -73,28 +74,29 @@ const Products: React.FC = () => {
     <>
     <Navbar authorize={false} />
     <main>
-      <section className="max-w-[1086px] mx-auto mt-[104px] px-[20px]">
-        <div className="text-[30px] font-[600] text-left">
-          <span className="bg-gradient-to-r from-sky-400 to-fuchsia-500 h-10 text-transparent bg-clip-text">
-            Genie
-          </span>
-          : AI Gift Ideas
-        </div>
-        
-        <div className="border-[2px] border-solid h-[92px] rounded-[10px] p-[24px] border-[#CAD3DD] flex mt-[32px]">
-          <span className="mr-[10px] text-[24px] text-[#5E6577] h-[39px] w-[984px] text-left">Recommend birthday gift ideas for my 55 year old mother. She likes pickleball, gardening....</span>
-          <img className="w-[44px] h-[44px]" src="/images/6.png" alt="" />
-        </div>
-        <div className="text-[16px] text-gray-700 font-[400] mt-[20px] text-left">
-            Not liking these suggestion? try again with more details or{" "}
-            <span className="text-[#50BCD9] font-[600]">
-              get help from Genie
-            </span>
-          </div>
-          
-      </section>
+      
+      <section className="max-w-[1086px] mx-auto mt-[104px] px-[20px] lg:px-4">
+  <div className="text-3xl font-semibold text-left">
+    <span className="bg-gradient-to-r from-sky-400 to-fuchsia-500 h-10 text-transparent bg-clip-text">
+      Genie
+    </span>
+    : AI Gift Ideas
+  </div>
+  
+  <div className="border-2 border-solid rounded-md p-6 border-[#CAD3DD] flex mt-8 lg:mt-16">
+    <span className="mr-4 text-[24px] text-[#5E6577] flex-grow lg:w-3/4">Recommend birthday gift ideas for my 55 year old mother. She likes pickleball, g..</span>
+    <img className="w-11 h-11 lg:w-12 lg:h-12" src="/images/6.png" alt="" />
+  </div>
+  <div className="text-base text-gray-700 mt-8 lg:mt-12">
+    Not liking these suggestions? Try again with more details or{" "}
+    <span className="text-[#50BCD9] font-semibold">get help from Genie</span>
+  </div>
+</section>
+
       <div className="max-w-[1086px] mx-auto mt-[121px] px-[20px] lg:px-[0px]">
-        <h2 className="text-[30px] font-[600] h-[36px] text-left mb-[32px]">1. Beauty gift basket</h2>
+       <div>
+       <h2 className="text-[30px] font-[600] h-[36px] text-left mb-[32px]">1. Beauty gift basket</h2>
+       </div>
         <Slider {...settings}>
           {products.length > 0 ? (
             products.map((productItem: ProductItem, index: number) => (
@@ -151,3 +153,4 @@ const Products: React.FC = () => {
 };
 
 export default Products;
+

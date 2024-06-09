@@ -11,7 +11,7 @@ const Loader = () => {
     useEffect(()=>{
         setTimeout(()=>{
             navigate(`/products/${giftType}`)
-        },2000)
+        },5000)
     },[])
     
     return (<div>

@@ -1,14 +1,13 @@
-// src/features/product/productSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Product {
-  // id: number;
   quantity: string;
   name: string;
   rating: string;
   price: string;
   range: string;
   image: string;
+  text:string;
 }
 
 interface ProductState {

@@ -10,7 +10,7 @@ export const ReceipientFormSchema = Yup.object().shape({
 });
 
 export const GiftFormSchema = Yup.object().shape({
-  ocassion: Yup.string().required("This is a required field"),
+  ocassion: Yup.string().required("ocassion is a required "),
   giftType: Yup.string()
     .oneOf([
       "Thoughtful",
@@ -20,7 +20,7 @@ export const GiftFormSchema = Yup.object().shape({
       "Sentimental",
       "Entertaining",
     ], 'Invalid data')
-    .required("Age is required"),
+    .required("Type Of Gift is required"),
   maximumSpend: Yup.number().required(),
   countryName: Yup.string().required()
 });

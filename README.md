@@ -1,3 +1,6 @@
+# Important Note About Project
+In this project, I developed a dynamic Product Result Page that adjusts its content based on the type of gift selected. For instance, if the gift type is "Thoughtful," the page dynamically renders five distinct gift options. Conversely, if the gift type is "Practical," the page adapts to display four specific gifts. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
